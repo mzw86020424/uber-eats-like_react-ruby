@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import './App.css'
+import React from 'react';
+import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,9 +7,9 @@ import {
 } from "react-router-dom";
 
 // components
-import { Restaurants } from "./containers/Restaurant.jsx";
-import { Foods } from "./containers/Foods.jsx";
-import { Orders } from "./containers/Orders.jsx";
+import { Restaurants } from './containers/Restaurants.jsx';
+import { Foods } from './containers/Foods.jsx';
+import { Orders } from './containers/Orders.jsx';
 
 function App() {
   return (
@@ -45,7 +45,6 @@ function App() {
       </Switch>
     </Router>
   );
-  
 }
 
 export default App;

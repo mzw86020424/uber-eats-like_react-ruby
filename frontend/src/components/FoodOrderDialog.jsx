@@ -14,12 +14,12 @@ import OrderHeaderImage from '../images/order-header.png';
 const OrderHeader = styled.img`
   width: 100%;
   height: 350px;
-`
+`;
 
 const DescriptionWrapper = styled.div`
   padding: 0 8px 8px 8px;
   height: 50px;
-`
+`;
 const CountersWrapper = styled.div`
   margin-right: auto;
   display: flex;
@@ -79,9 +79,11 @@ export const FoodOrderDialog = ({
               isDisabled={countNumber <= 1}
             />
           </CountItem>
+          <CountItem>
           <CountNum>
             {countNumber}
           </CountNum>
+          </CountItem>
           <CountItem>
             <CountUpButton
               onClick={() => onClickCountUp()}
@@ -91,8 +93,11 @@ export const FoodOrderDialog = ({
         </CountersWrapper>
         <OrderButton onClick={() => onClickOrder()}>
           <OrderTextWrapper>
+            <OrderButtonTextWrapper>
+              {`${countNumber}点を注文に追加`}
+            </OrderButtonTextWrapper>
             <PriceWrapper>
-              {`|${countNumber * food.price}`}
+              {`¥${countNumber * food.price}`}
             </PriceWrapper>
           </OrderTextWrapper>
         </OrderButton>

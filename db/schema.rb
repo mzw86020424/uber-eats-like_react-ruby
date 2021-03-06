@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 2021_02_28_084105) do
     t.integer "order_id"
     t.integer "count", default: 0, null: false
     t.boolean "active", default: false, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["food_id"], name: "index_line_foods_on_food_id"
     t.index ["order_id"], name: "index_line_foods_on_order_id"
     t.index ["restaurant_id"], name: "index_line_foods_on_restaurant_id"
@@ -36,6 +38,8 @@ ActiveRecord::Schema.define(version: 2021_02_28_084105) do
   create_table "orders", force: :cascade do |t|
     t.integer "restaurant_id", null: false
     t.integer "total_price", default: 0, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["restaurant_id"], name: "index_orders_on_restaurant_id"
   end
 

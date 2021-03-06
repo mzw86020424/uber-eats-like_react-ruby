@@ -1,9 +1,9 @@
-import { REQUEST_STATE } from "../constants";
+import { REQUEST_STATE } from '../constants';
 
 export const initialState = {
   fetchState: REQUEST_STATE.INITIAL,
   foodsList: [],
-}
+};
 
 export const foodsActionTypes = {
   FETCHING: 'FETCHING',

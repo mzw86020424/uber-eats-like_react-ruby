@@ -1,12 +1,12 @@
-import React, { Fragment, useReducer, useEffect } from "react";
+import React, { Fragment, useReducer, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 
 // components
-import Skelton from "@material-ui/lab/Skeleton";
+import Skeleton from '@material-ui/lab/Skeleton';
 
 // apis
-import { fetchRestaurants } from "../apis/restaurants";
+import { fetchRestaurants } from '../apis/restaurants';
 
 // reducers
 import {
@@ -16,12 +16,12 @@ import {
 } from '../reducers/restaurants';
 
 // constants
-import { REQUEST_STATE } from "../constants";
+import { REQUEST_STATE } from '../constants';
 
 // images
 import MainLogo from '../images/logo.png';
 import MainCoverImage from '../images/main-cover-image.png';
-import RestaurantImage from "../images/restaurant-image.jpg";
+import RestaurantImage from '../images/restaurant-image.jpg';
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -33,8 +33,8 @@ const MainLogoImage = styled.img`
   height: 90px;
 `
 const MainCoverImageWrapper = styled.div`
-  text-align:c center;1
-`
+  text-align: center;
+`;
 
 const MainCover = styled.img`
   height: 600px;
@@ -94,9 +94,9 @@ export const Restaurants = () => {
         {
           state.fetchState === REQUEST_STATE.LOADING ?
             <Fragment>
-              <Skelton variant="rect" width={450} height={300} />
-              <Skelton variant="rect" width={450} height={300} />
-              <Skelton variant="rect" width={450} height={300} />
+              <Skeleton variant="rect" width={450} height={300} />
+              <Skeleton variant="rect" width={450} height={300} />
+              <Skeleton variant="rect" width={450} height={300} />
             </Fragment>
             :
             state.restaurantsList.map((item, index) =>
