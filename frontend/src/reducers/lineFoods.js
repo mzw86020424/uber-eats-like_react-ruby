@@ -3,7 +3,7 @@ import { REQUEST_STATE } from '../constants';
 export const initialState = {
   fetchState: REQUEST_STATE.INITIAL, // 取得状況
   postState: REQUEST_STATE.INITIAL, // 登録状況
-  lineFoodSummary: null, // 仮注文データ
+  lineFoodsSummary: null, // 仮注文データ
 };
 
 export const lineFoodsActionTypes = {
@@ -23,7 +23,7 @@ export const lineFoodsReducer = (state, action) => {
     case lineFoodsActionTypes.FETCH_SUCCESS:
       return {
         fetchState: REQUEST_STATE.OK,
-        lineFoodSummary: action.payload.lineFoodSummary,
+        lineFoodsSummary: action.payload.lineFoodsSummary,
       };
     case lineFoodsActionTypes.POSTING:
       return {
